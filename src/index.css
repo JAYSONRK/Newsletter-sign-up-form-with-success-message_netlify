@@ -1,0 +1,202 @@
+@import url('https://fonts.googleapis.com/css2?family=Agbalumo&family=Fraunces:wght@700&family=Hanken+Grotesk:wght@500&family=Josefin+Sans:wght@300;400;600&family=Karla:wght@400;700&family=Kumbh+Sans:wght@400;700&family=League+Spartan:wght@400;500;700&family=Libre+Franklin:wght@300;600;700&family=Manrope:wght@500;700&family=Montserrat:ital,wght@0,500;1,200&family=Open+Sans&family=Outfit:wght@300;400;600&family=Overpass:wght@400;700&family=Playpen+Sans:wght@700&family=Poppins:wght@400;500;600;700&family=Red+Hat+Display:wght@500;700;900&family=Roboto:wght@400;700&family=Rubik:ital@1&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+    --Tomato: hsl(4, 100%, 67%);
+    --Dark-Slate-Grey: hsla(234, 29%, 20%, 0.96);
+    --Charcoal-Grey: hsl(235, 18%, 26%);
+    --Grey: hsla(231, 7%, 60%, 0.633);
+    --White: hsl(0, 0%, 100%);
+}
+
+body {
+  font-family: Roboto, sans-serif;
+  font-size: 16px;
+  min-width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: hsla(234, 29%, 20%, 0.903);
+  font-weight: 400;
+}
+
+.card {
+  display: grid;
+  grid-template-rows: 1fr 1.8fr;
+  background-color: var(--White);
+}
+
+
+.article {
+  margin: 1.5rem;
+}
+
+h1 {
+  font-size: 2.3rem;
+}
+
+p {
+  padding: 1.5rem 0;
+
+}
+
+ul {
+  padding-bottom: 1.5rem;;
+}
+
+
+li {
+  list-style-image: url("./images/icon-list.svg");
+  margin: 0 1.8rem;
+  line-height: 1.5rem;
+  padding:0 0 0.5rem 0.5rem;
+}
+
+label {
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+input { 
+  display: block;
+  width: 100%;
+  height: 3.5rem;
+  margin:  0.5rem 0 1.5rem 0;
+  padding-left: 1.5rem; 
+  border-radius: 0.5rem;
+  outline: none;
+  border: 1px solid var(--Grey);
+  font-size: 1rem;
+}
+
+input:hover {
+  border: 1px solid var( --Dark-Slate-Grey);
+  cursor: pointer;
+}
+
+::placeholder {
+  font-size: 1rem;;
+}
+
+button {
+  display: block;
+  width: 100%;
+  height: 3.5rem;
+  margin:  0.5rem 0 1.5rem 0;
+  border-radius: 0.5rem;
+  border: none;
+  background-color: var(--Dark-Slate-Grey);
+  color:  var( --White);
+  font-weight: 700;
+  letter-spacing: 0.07rem;
+}
+
+button:hover {
+  background: linear-gradient(90deg, hsl(4, 100%, 67%) 60%, hsl(25, 100%, 67%));
+  cursor: pointer;
+}
+
+.cardsuccess {
+  background-color: var(--White);
+  padding: 1rem;
+}
+
+.cardsuccess img {
+  padding: 5rem 0 1rem 0;
+}
+
+.cardsuccess button {
+  margin-top: 15rem;
+}
+
+.cardsuccess p {
+  line-height: 1.5rem;
+}
+
+.cardsuccess span {
+  font-weight: 700;
+}
+
+.error {
+  display: inline-block;
+  font-size: 0.8rem;
+  font-weight: 700;
+  padding-left: 7rem;
+  color:hsl(4, 100%, 67%);
+}
+
+@media (min-width: 768px) {
+  body {
+    background-color: var(--Dark-Slate-Grey);
+  }
+
+  #root {
+    max-height: 100vh;
+  }
+
+  .card {
+    display: grid;
+    grid-template-columns:  1fr 0.85fr;
+    height: 600px;
+    width: 900px;
+    padding: 1rem;
+    border-radius: 2rem;
+  }
+
+  img {
+    max-width:95%;
+    margin-left: 1rem;
+  }
+  .article {
+    grid-column: 1/2;
+    grid-row: 1/2;
+    padding: 1.5rem 0.5rem 0rem 0.5rem;
+  }
+
+  picture {
+    grid-column: 2/3;
+  }
+
+  h1 {
+    font-size: 3.5rem;
+  }
+  .error {
+    padding-left: 12rem;
+  }
+  .cardsuccess {
+    background-color: var(--White);
+    width: 500px;
+    padding: 2rem 3rem;
+    border-radius: 3rem;
+  }
+
+  .cardsuccess img {
+    padding: 1rem 0 2rem 0;
+    margin: 0;
+  }
+
+  .cardsuccess h1 {
+    font-size: 3.5rem;
+    line-height: 3.5rem;
+  }
+  
+  .cardsuccess button {
+    margin-top: 1.5rem;
+  }
+  
+  .cardsuccess p {
+    line-height: 1.7rem;
+    font-size: 1.05rem;
+  }
+  
+  .cardsuccess span {
+    font-weight: 700;
+  }
+
+}
